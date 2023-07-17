@@ -1,4 +1,7 @@
 import NotFound from "../pages/NotFound";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 
 function App() {

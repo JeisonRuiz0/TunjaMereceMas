@@ -1,14 +1,76 @@
 @import '/src/styles/vars';
 
-.notFound{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--yellow-component);
+.notFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yellow-palette);
+
+  @media screen and (max-width: 768px) {
+    background-size: cover;
+    background-position: center;
+  }
 }
-.notFound img{
-    margin-top: 5rem;
-    width: 78%;
+
+.notFound-components__image img {
+  object-fit: cover;
+}
+
+.notFound-components__tittle h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--black-palette);
+  margin-bottom: 1rem;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 4rem;
+  }
+}
+
+.notFound-components__tittle p {
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--black-palette);
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.nofFound-components__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.nofFound-components__button button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.8rem;
+  }
 }
