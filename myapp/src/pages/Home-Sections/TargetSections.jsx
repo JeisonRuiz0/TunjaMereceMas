@@ -11,7 +11,7 @@ const TargetSections = () => {
                     <h1>Gobierno</h1>
                 </div>
                 
-                <button type="button" class="btn btn-danger">Conoce mas aqui</button>
+                <button type="button" class="btn btn-danger">Conoce más aqui</button>
             </div>
             <div className="targetSection-targets">
             <TargetComponent iconURL="https://img.icons8.com/ios/50/000000/graduation-cap--v1.png" tittleTarget="Cultura" 

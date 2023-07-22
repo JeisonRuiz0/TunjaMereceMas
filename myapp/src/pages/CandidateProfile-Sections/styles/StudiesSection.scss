@@ -1,0 +1,54 @@
+@import '/src/styles/vars';
+
+.studies{
+    margin-top: 2rem;
+    padding: 0 6rem;
+    margin-bottom: 10rem;
+    width: 50%;
+}
+
+.studies__title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+
+.studies h4{
+    font-weight: normal;
+    font-size: 2.5rem;
+    color: var(--blue-palette);font-family: 'Cotton Butter', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.studies p{
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.studies-tittle_text {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 2rem;
+}
+
+.studies-tittle_text h1{
+
+    font-family: 'Cotton Butter', sans-serif;
+    font-size: 8rem;
+    text-align: left;
+    color: var(--blue-palette);
+}
+
+.studies-tittle_text h2{
+    font-family: 'Cotton Butter', sans-serif;
+    font-size: 6rem;
+    text-align: left;
+    color: var(--purple-palette);
+}
+
+.contentManageData{
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}

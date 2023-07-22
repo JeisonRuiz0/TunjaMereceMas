@@ -6,9 +6,9 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 35rem;
-    height: 45rem;
-    margin: 1rem 4rem;
+    width: 22rem;
+    height: 28rem;
+    margin: 1rem 1rem;
     padding: 1rem;
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
@@ -25,14 +25,14 @@
 .targetComponent-content h3{
     font-family: 'Cotton Butter', sans-serif;
     color: var(--blue-palette);
-    font-size: 6rem;
+    font-size: 3rem;
     margin-top: 1rem;
 }
 
 .targetComponent-content p{
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
-    padding: 1rem 1rem;
+    padding: 0 1rem;
     font-weight: bold;
     color: var(--blue-palette);
 }
@@ -40,7 +40,6 @@
 .targetComponent-content__icon{
     width: 3rem;
     height: 3rem;
-    margin: 1rem 0 ;
     border-radius: 4rem;
     color: var(--blue-palette);
 }
@@ -56,8 +55,8 @@
    border-color: var(--purple-palette);
    font-family: 'Cotton Butter', sans-serif;
    border-radius: 2rem;
-   font-size: 2rem;
-   width: 6rem;
+   font-size: 1.3rem;
+   width: 3.5rem;
    justify-content: end;
-   margin-bottom: 2rem;
+   margin-bottom: 3rem;
 }

@@ -19,10 +19,10 @@ const Navbar = () => {
 
 
                 <div className="navbarConainerItems">
-                    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div className="navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <a className="nav-link" aria-current="page" href="#">Inicio</a>
-                            <a className="nav-link" href="#">Perfil del candidato</a>
+                            <a className="nav-link" aria-current="page" href="/">Inicio</a>
+                            <a className="nav-link" href="/Perfil">Perfil del candidato</a>
                             <a className="nav-link" href="#">Plan de gobierno</a>
                             <a className="nav-link" href="#">Tu aporte</a>
                         </div>

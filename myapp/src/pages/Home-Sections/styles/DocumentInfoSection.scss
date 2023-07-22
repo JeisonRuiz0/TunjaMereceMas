@@ -3,9 +3,10 @@
 .documentInfoSection{
     display: flex;
     flex-direction: row;
+    margin: 0 4rem;
     position: relative;
-    padding: 0 4rem;
-    padding-left: 10rem;
+    padding: 0 2rem;
+    padding-left: 5rem;
 }
 
 .documentInfoSection__Info{
@@ -20,15 +21,17 @@
     font-family: 'Cotton Butter', sans-serif;
     color: var(--blue-palette);
     position: relative;
-    font-size: 12rem;
+    font-size: 9rem;
 }
 
 .documentInfoSection__Info p{
     color: var(--blue-palette);
-    margin-top: 4rem;
+    margin-top: 2rem;
     position: relative;
-    width: 80%;
-    font-size: 2rem;
+    font-weight: normal;
+    text-align: justify;
+    width: 98%;
+    font-size: 1.5rem;
 }
 
 .documentInfoSection__Info button{
@@ -36,9 +39,9 @@
     border-color: var(--purple-palette);
     position: relative;
     font-family: 'Cotton Butter', sans-serif;
-    margin-top: 4rem;
-    font-size: 3rem;
-    width: 13rem;
+    margin-top: 3rem;
+    font-size: 2.7rem;
+    width: 12rem;
 }
 
 
@@ -53,11 +56,10 @@
 
 
 .documentInfoSection__Image img{
-    margin-top: 15rem;
+    margin-top: 9rem;
     width: 80%;
     height: 80%;
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-
     border-radius: 2rem;
 }
 

@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    width: 100%;
     top: 0;
     background: -webkit-linear-gradient(50deg, var(--white) 60%, var(--blue-palette) 40%);
     background: -o-linear-gradient(50deg, var(--white) 60%, var(--blue-palette) 40%);
@@ -13,16 +14,16 @@
 }
 
 .navbarContainer img{
-    width: 10rem;
-    height: 7rem;
-    margin: 1rem 1rem;
+    width: 5rem;
+    height: 3rem;
     transition: all 0.3s ease-in-out;
 }
 .navbarContainer a{
     text-decoration: none;
     color: var(--white);
-    font-size: 2rem;
+    font-weight: normal;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin: 2rem 3rem;
+    margin: 1rem 3rem;
     transition: all 0.3s ease-in-out;
 }

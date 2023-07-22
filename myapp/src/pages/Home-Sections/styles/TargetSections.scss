@@ -16,21 +16,20 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin: 4rem 0;
+    margin: 1rem 0;
 }
 
 .targetSection-tittle_text {
     display: flex;
     flex-direction: column;
-    margin: 2rem 4rem;
+    margin: 1rem 2rem;
 }
 
 .targetSection-tittle_text h1{
-    margin: 4rem 0;
+    margin: 3.4rem 0;
     position: absolute;
     font-family: 'Cotton Butter', sans-serif;
-    font-size: 18rem;
-
+    font-size: 11.5rem;
     margin-left: 6rem;
     text-align: left;
     color: var(--blue-palette);
@@ -39,7 +38,7 @@
 .targetSection-tittle_text h2{
     margin: 0;
     font-family: 'Cotton Butter', sans-serif;
-    font-size: 8rem;
+    font-size: 6rem;
     margin-left: 6rem;
     text-align: left;
     color: var(--purple-palette);
@@ -47,14 +46,14 @@
 
 .targetSection-tittle button{
     font-family: 'Cotton Butter', sans-serif;
-    font-size: 3.8rem;
-    margin: 0 4rem;
+    font-size: 3rem;
+    margin: 0 2rem;
     border-radius: 10px;
-    height: 6rem;
+    height: 4rem;
     border-color: var(--purple-palette);
-    width: 23rem;
+    width: 16rem;
     background-color: var(--purple-palette);
-    margin-right: 16rem;
+    margin-right: 10rem;
     margin-top: 10rem;
 }
 
