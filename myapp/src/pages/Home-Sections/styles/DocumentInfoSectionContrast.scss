@@ -1,0 +1,66 @@
+@import '/src/styles/vars';
+
+.documentInfoSectionContrast{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 0 4rem;
+    padding: 1rem;
+    margin-right: 10rem;
+    margin-top: 10rem;
+}
+
+.documentInfoSectionContrast__Info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+    width: 50%;
+}
+
+.documentInfoSectionContrast__Info h1{
+    font-family: 'Cotton Butter', sans-serif;
+    color: var(--blue-palette);
+    position: relative;
+    font-size: 11rem;
+}
+
+.documentInfoSectionContrast__Info p{
+    color: var(--blue-palette);
+    margin-top: 4rem;
+    position: relative;
+    width: 80%;
+    text-align: end;
+    font-size: 2rem;
+}
+
+.documentInfoSectionContrast__Info button{
+    background-color: var(--purple-palette);
+    border-color: var(--purple-palette);
+    position: relative;
+    font-family: 'Cotton Butter', sans-serif;
+    margin-top: 4rem;
+    font-size: 3rem;
+    width: 13rem;
+}
+
+
+.documentInfoSectionContrast__Image{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    border-radius: 2rem;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+
+.documentInfoSectionContrast__Image img{
+    width: 90%;
+    height: 90%;
+    border-radius: 2rem;
+}
+

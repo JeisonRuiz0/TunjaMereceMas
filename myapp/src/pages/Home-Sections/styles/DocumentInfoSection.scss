@@ -1,0 +1,63 @@
+@import '/src/styles/vars';
+
+.documentInfoSection{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 0 4rem;
+    padding-left: 10rem;
+}
+
+.documentInfoSection__Info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    width: 50%;
+}
+
+.documentInfoSection__Info h1{
+    font-family: 'Cotton Butter', sans-serif;
+    color: var(--blue-palette);
+    position: relative;
+    font-size: 12rem;
+}
+
+.documentInfoSection__Info p{
+    color: var(--blue-palette);
+    margin-top: 4rem;
+    position: relative;
+    width: 80%;
+    font-size: 2rem;
+}
+
+.documentInfoSection__Info button{
+    background-color: var(--purple-palette);
+    border-color: var(--purple-palette);
+    position: relative;
+    font-family: 'Cotton Butter', sans-serif;
+    margin-top: 4rem;
+    font-size: 3rem;
+    width: 13rem;
+}
+
+
+.documentInfoSection__Image{
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+
+.documentInfoSection__Image img{
+    margin-top: 15rem;
+    width: 80%;
+    height: 80%;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+
+    border-radius: 2rem;
+}
+
