@@ -1,62 +1,119 @@
 @import '/src/styles/vars';
 
 
-.targetComponent{
+/* Estilos del .targetComponent */
+.targetComponent {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    width: 22rem;
-    height: 28rem;
-    margin: 1rem 1rem;
+    width: 15rem;
+    /* Reducimos el ancho */
+    height: 20rem;
+    margin: 1rem;
     padding: 1rem;
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
-.targetComponent-content{
+/* Estilos del .targetComponent-content */
+.targetComponent-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
     height: 100%;
 }
 
-.targetComponent-content h3{
+/* Estilos del .targetComponent-content h3 */
+.targetComponent-content h3 {
     font-family: 'Cotton Butter', sans-serif;
     color: var(--blue-palette);
-    font-size: 3rem;
+    font-size: clamp(1.2rem, 1.5rem, 1.8rem);
+    /* Tamaño de fuente responsivo */
     margin-top: 1rem;
 }
 
-.targetComponent-content p{
+/* Estilos del .targetComponent-content p */
+.targetComponent-content p {
     font-size: 1rem;
+    /* Ajustamos el tamaño de la fuente */
     text-align: center;
     padding: 0 1rem;
     font-weight: bold;
     color: var(--blue-palette);
+    max-height: 10rem;
+    /* Establecemos una altura máxima */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    /* Limitamos a un máximo de 6 líneas (aproximadamente 50 palabras) */
+    -webkit-box-orient: vertical;
 }
 
-.targetComponent-content__icon{
-    width: 3rem;
-    height: 3rem;
-    border-radius: 4rem;
+/* Estilos del .targetComponent-content__icon */
+.targetComponent-content__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
     color: var(--blue-palette);
 }
 
-.targetComponent-content__tittle{
+/* Estilos del .targetComponent-content__tittle */
+.targetComponent-content__tittle {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
- 
-.targetComponent-content button{
-   background-color: var(--purple-palette);
-   border-color: var(--purple-palette);
-   font-family: 'Cotton Butter', sans-serif;
-   border-radius: 2rem;
-   font-size: 1.3rem;
-   width: 3.5rem;
-   justify-content: end;
-   margin-bottom: 3rem;
+
+/* Estilos del .targetComponent-content button */
+.targetComponent-content button {
+    background-color: var(--purple-palette);
+    border-color: var(--purple-palette);
+    font-family: 'Cotton Butter', sans-serif;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    /* Ajustamos el tamaño de la fuente */
+    width: 8rem;
+    height: 2.5rem;
+    /* Ajustamos la altura del botón */
+    margin-top: auto;
+    /* Alineamos el botón al final */
+    cursor: pointer;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 767px) {
+    .targetComponent {
+        width: 100%;
+        height: auto;
+    }
+
+    .targetComponent-content {
+        padding: 1rem;
+    }
+
+    .targetComponent-content h3 {
+        font-size: clamp(1rem, 1.3rem, 1.6rem);
+        /* Tamaño de fuente responsivo */
+    }
+
+    .targetComponent-content p {
+        font-size: 0.9rem;
+        /* Ajustamos el tamaño de la fuente */
+        max-height: none;
+        /* Quitamos la altura máxima para que pueda crecer */
+        -webkit-line-clamp: initial;
+    }
+
+    .targetComponent-content__icon {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .targetComponent-content button {
+        font-size: 0.8rem;
+        /* Ajustamos el tamaño de la fuente */
+        width: 7rem;
+        height: 2rem;
+        /* Ajustamos la altura del botón */
+    }
 }

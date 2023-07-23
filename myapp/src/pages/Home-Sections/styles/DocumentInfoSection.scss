@@ -1,65 +1,126 @@
 @import '/src/styles/vars';
 
-.documentInfoSection{
+
+/* Estilos del .documentInfoSection */
+.documentInfoSection {
     display: flex;
     flex-direction: row;
-    margin: 0 4rem;
-    position: relative;
-    padding: 0 2rem;
-    padding-left: 5rem;
+    margin: 0 2rem;
+    /* Reducimos los márgenes para dispositivos pequeños */
+    padding: 0 1rem;
+    /* Reducimos los paddings para dispositivos pequeños */
 }
 
-.documentInfoSection__Info{
+/* Estilos del .documentInfoSection__Info */
+.documentInfoSection__Info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     height: 100%;
     width: 50%;
+    padding-left: 0;
+    /* Quitamos el padding para dispositivos pequeños */
 }
 
-.documentInfoSection__Info h1{
+/* Estilos del .documentInfoSection__Info h1 */
+.documentInfoSection__Info h1 {
     font-family: 'Cotton Butter', sans-serif;
     color: var(--blue-palette);
-    position: relative;
-    font-size: 9rem;
+    font-size: 6rem;
+    /* Ajustamos el tamaño de la fuente para dispositivos pequeños */
+    text-align: left;
 }
 
-.documentInfoSection__Info p{
+/* Estilos del .documentInfoSection__Info p */
+.documentInfoSection__Info p {
     color: var(--blue-palette);
-    margin-top: 2rem;
-    position: relative;
+    margin-top: 1rem;
+    /* Ajustamos el margen superior para dispositivos pequeños */
     font-weight: normal;
     text-align: justify;
-    width: 98%;
-    font-size: 1.5rem;
+    width: 100%;
+    /* Ajustamos el ancho del párrafo */
+    font-size: 1.2rem;
+    /* Ajustamos el tamaño de la fuente para dispositivos pequeños */
 }
 
-.documentInfoSection__Info button{
+/* Estilos del .documentInfoSection__Info button */
+.documentInfoSection__Info button {
     background-color: var(--purple-palette);
     border-color: var(--purple-palette);
-    position: relative;
     font-family: 'Cotton Butter', sans-serif;
-    margin-top: 3rem;
-    font-size: 2.7rem;
-    width: 12rem;
+    margin-top: 2rem;
+    /* Ajustamos el margen superior para dispositivos pequeños */
+    font-size: 2rem;
+    /* Ajustamos el tamaño de la fuente para dispositivos pequeños */
+    width: 100%;
+    /* El botón ocupará todo el ancho disponible */
 }
 
-
-.documentInfoSection__Image{
+/* Estilos del .documentInfoSection__Image */
+.documentInfoSection__Image {
     display: flex;
     align-items: center;
-    position: relative;
     justify-content: center;
     height: 100%;
     width: 50%;
 }
 
-
-.documentInfoSection__Image img{
-    margin-top: 9rem;
-    width: 80%;
-    height: 80%;
+/* Estilos del .documentInfoSection__Image img */
+.documentInfoSection__Image img {
+    margin-top: 2rem;
+    /* Ajustamos el margen superior para dispositivos pequeños */
+    width: 100%;
+    /* La imagen ocupará todo el ancho disponible */
+    max-width: 80%;
+    /* Limitamos el ancho máximo de la imagen */
+    height: auto;
+    /* La altura se ajustará automáticamente */
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     border-radius: 2rem;
 }
 
+/* Estilos responsive */
+@media screen and (max-width: 1024px) {
+
+    /* Para tablets y dispositivos con ancho máximo de 1024px */
+    .documentInfoSection__Info h1 {
+        font-size: 4rem;
+        /* Ajustamos el tamaño de la fuente */
+    }
+
+    .documentInfoSection__Info p {
+        font-size: 1rem;
+        /* Ajustamos el tamaño de la fuente */
+    }
+
+    .documentInfoSection__Info button {
+        font-size: 1.8rem;
+        /* Ajustamos el tamaño de la fuente */
+    }
+
+    .documentInfoSection__Image img {
+        margin-top: 1rem;
+        /* Ajustamos el margen superior */
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Para dispositivos con ancho máximo de 768px (tablets o celulares) */
+    .documentInfoSection {
+        flex-direction: column;
+        /* Alineamos los elementos verticalmente */
+    }
+
+    .documentInfoSection__Info,
+    .documentInfoSection__Image {
+        width: 100%;
+        /* Ambas clases ocuparán todo el ancho disponible */
+    }
+
+    .documentInfoSection__Info button {
+        margin-top: 1rem;
+        /* Ajustamos el margen superior */
+    }
+}

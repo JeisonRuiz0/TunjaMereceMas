@@ -1,42 +1,61 @@
-import React from "react";
-import './styles/Navbar.scss';
+import React, { useState } from "react";
 import Icon from '../resources/images/Recurso2.png';
+import { Transition } from "@headlessui/react";
 
 const Navbar = () => {
-    return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-            <div className="container-fluid navbarContainer">
+  const handleToggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-                <div className="navbarConainerLogo">
-                    <a className="navbar-brand" href="#">
-                        <img src= {Icon} alt="" width="30" height="24" className="d-inline-block align-text-top" />
-                    </a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                </div>
+  return (
+    <nav className="bg-light fixed top-0 left-0 w-full z-50">
+      <div className="container mx-auto flex items-center justify-between py-4">
 
+        <div className="flex items-center">
+          <a href="/">
+            <img src={Icon} alt="" width="30" height="24" className="d-inline-block align-text-top" />
+          </a>
+        </div>
 
-                <div className="navbarConainerItems">
-                    <div className="navbar-collapse" id="navbarNavAltMarkup">
-                        <div className="navbar-nav">
-                            <a className="nav-link" aria-current="page" href="/">Inicio</a>
-                            <a className="nav-link" href="/Perfil">Perfil del candidato</a>
-                            <a className="nav-link" href="#">Plan de gobierno</a>
-                            <a className="nav-link" href="#">Tu aporte</a>
-                        </div>
-                    </div>
-                </div>
+        <div className="hidden md:flex space-x-4">
+          <a className="text-blue-600 hover:text-blue-800" href="/">Inicio</a>
+          <a className="text-blue-600 hover:text-blue-800" href="/Perfil">Perfil del candidato</a>
+          <a className="text-blue-600 hover:text-blue-800" href="#">Plan de gobierno</a>
+          <a className="text-blue-600 hover:text-blue-800" href="#">Tu aporte</a>
+        </div>
 
+        <div className="md:hidden">
+          <button
+            onClick={handleToggleMenu}
+            className="inline-block bg-transparent text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 py-2 px-4 rounded"
+          >
+            Menú
+          </button>
 
-                <div>
-                    <button className="btn btn-outline-success" type="submit">Login</button>
-
-                </div>
-            </div>
-        </nav>
-    );
+          <Transition
+            show={isMenuOpen}
+            enter="transition ease-out duration-100 transform"
+            enterFrom="opacity-0 scale-95"
+            enterTo="opacity-100 scale-100"
+            leave="transition ease-in duration-75 transform"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-0 scale-95"
+          >
+            {(ref) => (
+              <div ref={ref} className={`absolute top-0 left-0 h-screen w-500 bg-white shadow-lg md:w-auto md:top-auto md:right-auto md:relative md:flex md:space-x-4 ${isMenuOpen ? "block" : "hidden"}`}>
+                <a className="block text-blue-600 hover:text-blue-800 py-2 px-4" href="/">Inicio</a>
+                <a className="block text-blue-600 hover:text-blue-800 py-2 px-4" href="/Perfil">Perfil del candidato</a>
+                <a className="block text-blue-600 hover:text-blue-800 py-2 px-4" href="#">Plan de gobierno</a>
+                <a className="block text-blue-600 hover:text-blue-800 py-2 px-4" href="#">Tu aporte</a>
+              </div>
+            )}
+          </Transition>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;

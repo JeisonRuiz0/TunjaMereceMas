@@ -1,51 +1,63 @@
 @import '/src/styles/vars';
 
-.documentInfoSectionContrast{
+
+/* Estilos del .documentInfoSectionContrast */
+.documentInfoSectionContrast {
     display: flex;
     flex-direction: row;
     position: relative;
-    margin: 0 4rem;
+    margin: 0 2rem;
+    /* Reducimos los márgenes para dispositivos pequeños */
     padding: 1rem;
-    margin-right: 10rem;
-    margin-top: 5rem;
 }
 
-.documentInfoSectionContrast__Info{
+/* Estilos del .documentInfoSectionContrast__Info */
+.documentInfoSectionContrast__Info {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     height: 100%;
     width: 50%;
+    padding-right: 0;
+    /* Quitamos el padding para dispositivos pequeños */
 }
 
-.documentInfoSectionContrast__Info h1{
+/* Estilos del .documentInfoSectionContrast__Info h1 */
+.documentInfoSectionContrast__Info h1 {
     font-family: 'Cotton Butter', sans-serif;
     color: var(--blue-palette);
-    position: relative;
-    font-size: 9rem;
+    font-size: 6rem;
+    /* Ajustamos el tamaño de la fuente para dispositivos pequeños */
+    text-align: right;
 }
 
-.documentInfoSectionContrast__Info p{
+/* Estilos del .documentInfoSectionContrast__Info p */
+.documentInfoSectionContrast__Info p {
     color: var(--blue-palette);
-    margin-top: 2rem;
-    position: relative;
-    width: 98%;
+    margin-top: 1rem;
+    /* Ajustamos el margen superior para dispositivos pequeños */
+    width: 100%;
+    /* Ajustamos el ancho del párrafo */
     text-align: justify;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    /* Ajustamos el tamaño de la fuente para dispositivos pequeños */
 }
 
-.documentInfoSectionContrast__Info button{
+/* Estilos del .documentInfoSectionContrast__Info button */
+.documentInfoSectionContrast__Info button {
     background-color: var(--purple-palette);
     border-color: var(--purple-palette);
-    position: relative;
     font-family: 'Cotton Butter', sans-serif;
-    margin-top: 3rem;
-    font-size: 2.7rem;
-    width: 12rem;
+    margin-top: 2rem;
+    /* Ajustamos el margen superior para dispositivos pequeños */
+    font-size: 2rem;
+    /* Ajustamos el tamaño de la fuente para dispositivos pequeños */
+    width: 100%;
+    /* El botón ocupará todo el ancho disponible */
 }
 
-
-.documentInfoSectionContrast__Image{
+/* Estilos del .documentInfoSectionContrast__Image */
+.documentInfoSectionContrast__Image {
     display: flex;
     align-items: center;
     text-align: center;
@@ -53,14 +65,39 @@
     justify-content: center;
     height: 100%;
     width: 50%;
+    margin-top: 2rem;
+    /* Ajustamos el margen superior para dispositivos pequeños */
 }
 
-
-.documentInfoSectionContrast__Image img{
-    margin-top: 4rem;
-    width: 80%;
-    height: 80%;
+/* Estilos del .documentInfoSectionContrast__Image img */
+.documentInfoSectionContrast__Image img {
+    width: 100%;
+    /* La imagen ocupará todo el ancho disponible */
+    max-width: 80%;
+    /* Limitamos el ancho máximo de la imagen */
+    height: auto;
+    /* La altura se ajustará automáticamente */
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     border-radius: 2rem;
 }
 
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+
+    /* Para dispositivos con ancho máximo de 768px (tablets o celulares) */
+    .documentInfoSectionContrast {
+        flex-direction: column-reverse;
+        /* Alineamos los elementos verticalmente */
+    }
+
+    .documentInfoSectionContrast__Info,
+    .documentInfoSectionContrast__Image {
+        width: 100%;
+        /* Ambas clases ocuparán todo el ancho disponible */
+    }
+
+    .documentInfoSectionContrast__Image img {
+        margin-top: 1rem;
+        /* Ajustamos el margen superior */
+    }
+}

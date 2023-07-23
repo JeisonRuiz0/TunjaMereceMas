@@ -1,16 +1,18 @@
 @import '/src/styles/vars';
 
-.targetSection{
+
+/* Estilos del .targetSection */
+.targetSection {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    position: relative;
     align-items: center;
     width: 100%;
 }
 
-.targetSection-tittle{
+/* Estilos del .targetSection-tittle */
+.targetSection-tittle {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -19,51 +21,113 @@
     margin: 1rem 0;
 }
 
+/* Estilos del .targetSection-tittle_text */
 .targetSection-tittle_text {
     display: flex;
     flex-direction: column;
     margin: 1rem 2rem;
 }
 
-.targetSection-tittle_text h1{
+/* Estilos del .targetSection-tittle_text h1 */
+.targetSection-tittle_text h1 {
     margin: 3.4rem 0;
-    position: absolute;
     font-family: 'Cotton Butter', sans-serif;
-    font-size: 11.5rem;
-    margin-left: 6rem;
+    font-size: 8rem;
+    /* Ajustamos el tamaño de la fuente */
     text-align: left;
     color: var(--blue-palette);
 }
 
-.targetSection-tittle_text h2{
+/* Estilos del .targetSection-tittle_text h2 */
+.targetSection-tittle_text h2 {
     margin: 0;
     font-family: 'Cotton Butter', sans-serif;
-    font-size: 6rem;
-    margin-left: 6rem;
+    font-size: 4rem;
+    /* Ajustamos el tamaño de la fuente */
     text-align: left;
     color: var(--purple-palette);
 }
 
-.targetSection-tittle button{
+/* Estilos del .targetSection-tittle button */
+.targetSection-tittle button {
     font-family: 'Cotton Butter', sans-serif;
-    font-size: 3rem;
-    margin: 0 2rem;
+    font-size: 2rem;
+    /* Ajustamos el tamaño de la fuente */
+    margin: 1rem 2rem;
     border-radius: 10px;
     height: 4rem;
     border-color: var(--purple-palette);
-    width: 16rem;
+    width: 100%;
+    /* El botón ocupará todo el ancho disponible */
     background-color: var(--purple-palette);
-    margin-right: 10rem;
-    margin-top: 10rem;
+    margin-top: 2rem;
+    /* Ajustamos el margen superior */
 }
 
-.targetSection-targets{
+/* Estilos del .targetSection-targets */
+.targetSection-targets {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    /* Permitimos que los targets se ajusten en filas o columnas */
     justify-content: center;
     align-items: center;
     margin: 7rem 0;
 }
 
+/* Estilos responsive */
+@media screen and (max-width: 1024px) {
 
+    /* Para tablets y dispositivos con ancho máximo de 1024px */
+    .targetSection-tittle_text h1 {
+        font-size: 6rem;
+        /* Ajustamos el tamaño de la fuente */
+    }
 
+    .targetSection-tittle_text h2 {
+        font-size: 3rem;
+        /* Ajustamos el tamaño de la fuente */
+    }
+
+    .targetSection-tittle button {
+        font-size: 1.5rem;
+        /* Ajustamos el tamaño de la fuente */
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Para dispositivos con ancho máximo de 768px (tablets o celulares) */
+    .targetSection-tittle {
+        flex-direction: column;
+        /* Alineamos el h1 y h2 verticalmente */
+        align-items: flex-start;
+    }
+
+    .targetSection-tittle_text h1 {
+        font-size: 4rem;
+        /* Ajustamos el tamaño de la fuente */
+        margin-left: 0;
+        /* Quitamos el margen izquierdo */
+    }
+
+    .targetSection-tittle_text h2 {
+        font-size: 2rem;
+        /* Ajustamos el tamaño de la fuente */
+        margin-left: 0;
+        /* Quitamos el margen izquierdo */
+    }
+
+    .targetSection-tittle button {
+        font-size: 1.2rem;
+        /* Ajustamos el tamaño de la fuente */
+        margin-top: 1rem;
+        /* Ajustamos el margen superior */
+        width: 100%;
+        /* El botón ocupará todo el ancho disponible */
+    }
+
+    .targetSection-targets {
+        margin: 3rem 0;
+        /* Reducimos el margen entre los targets */
+    }
+}
